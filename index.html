@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namfon's Portfolio ✨ | Public Health Student</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt & Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Prompt:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        prompt: ['Prompt', 'sans-serif'],
+                        fredoka: ['Fredoka', 'cursive'],
+                    },
+                    colors: {
+                        anime: {
+                            pink: '#FF80A6',
+                            mint: '#A8E6CF',
+                            teal: '#3AB09E',
+                            yellow: '#FFD3B6',
+                            purple: '#C3B1E1',
+                            dark: '#2D3047',
+                            softBg: '#F7FCFA'
+                        }
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        },
+                        sparkle: {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '0.5', transform: 'scale(0.85)' },
+                        }
+                    },
+                    animation: {
+                        float: 'float 3.5s ease-in-out infinite',
+                        sparkle: 'sparkle 2s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #F4FBF7;
+            background-image: 
+                radial-gradient(#A8E6CF 0.8px, transparent 0.8px),
+                radial-gradient(#FF80A6 0.8px, #F4FBF7 0.8px);
+            background-size: 28px 28px;
+            background-position: 0 0, 14px 14px;
+        }
+        .anime-card {
+            background: rgba(255, 255, 255, 0.94);
+            border: 3px solid #2D3047;
+            box-shadow: 6px 6px 0px #2D3047;
+            transition: all 0.2s ease;
+        }
+        .anime-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0px #2D3047;
+        }
+        .anime-btn {
+            border: 3px solid #2D3047;
+            box-shadow: 4px 4px 0px #2D3047;
+            transition: all 0.15s ease;
+        }
+        .anime-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #2D3047;
+        }
+        .anime-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #2D3047;
+        }
+    </style>
+</head>
+<body class="text-anime-dark antialiased selection:bg-anime-pink selection:text-white pb-12">
+
+    <nav class="sticky top-4 z-50 max-w-4xl mx-auto px-4 mb-8">
+        <div class="anime-card rounded-2xl bg-white/95 backdrop-blur px-6 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-fredoka text-anime-pink font-bold tracking-wider">Namfon.Health✨</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-6 font-semibold text-sm">
+                <a href="#about" class="hover:text-anime-teal transition-colors">เกี่ยวกับฉัน</a>
+                <a href="#education" class="hover:text-anime-teal transition-colors">การศึกษา</a>
+                <a href="#skills" class="hover:text-anime-teal transition-colors">ทักษะ & งานอดิเรก</a>
+                <a href="#contact" class="hover:text-anime-teal transition-colors">ติดต่อ</a>
+            </div>
+            <a href="#contact" class="anime-btn bg-anime-pink text-white font-bold px-4 py-1.5 rounded-xl text-sm flex items-center gap-2">
+                <i data-lucide="heart-pulse" class="w-4 h-4"></i> ติดต่อฉัน
+            </a>
+        </div>
+    </nav>
+
+    <header id="about" class="max-w-4xl mx-auto px-4 mb-12">
+        <div class="anime-card rounded-3xl p-6 sm:p-10 bg-gradient-to-br from-white via-emerald-50/60 to-pink-50/60 relative overflow-hidden">
+            <!-- Decorative Manga Background Accents -->
+            <div class="absolute -right-6 -top-6 w-28 h-28 bg-anime-yellow rounded-full opacity-50 blur-xl"></div>
+            <div class="absolute -left-6 -bottom-6 w-28 h-28 bg-anime-mint rounded-full opacity-60 blur-xl"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+                <!-- Profile Image Showcase -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-anime-pink via-anime-mint to-anime-purple rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="relative w-56 h-72 rounded-2xl border-4 border-anime-dark overflow-hidden bg-white shadow-inner">
+                            <img src="20251111_224454.jpg" 
+                                 alt="พรนภา อารีเอื้อ (น้ำฝน)" 
+                                 class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600';">
+                            <div class="absolute top-2 right-2 bg-anime-mint text-emerald-900 text-xs font-bold px-2.5 py-1 rounded-full border-2 border-anime-dark shadow animate-float">
+                                ปี 1 สธ.ชุมชน 🌿
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Bio Details -->
+                <div class="md:col-span-7 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 bg-anime-mint/50 border-2 border-anime-dark px-3.5 py-1 rounded-full text-xs font-bold mb-3">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-700 animate-sparkle"></i>
+                        <span>ยินดีต้อนรับสู่ Portfolio ของน้ำฝนค่ะ! 🌸</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold font-fredoka text-anime-dark mb-1">
+                        นางสาวพรนภา อารีเอื้อ
+                    </h1>
+                    <p class="text-base sm:text-lg font-bold text-anime-pink mb-3">
+                        (น้ำฝน / Namfon) — อายุ 18 ปี 🏥
+                    </p>
+                    <div class="bg-white/80 p-3.5 rounded-2xl border-2 border-anime-dark mb-5 text-sm text-gray-700 leading-relaxed font-medium">
+                        🎓 <strong>นักศึกษาชั้นปีที่ 1</strong><br/>
+                        วิทยาลัยสาธารณสุขศาสตร์บัณฑิต สาขาวิชาสาธารณสุขชุมชน<br/>
+                        <span class="text-xs text-gray-500 mt-1 block">มีความมุ่งมั่นสร้างสรรค์สุขภาพที่ดีให้แก่ชุมชน และพร้อมเรียนรู้สิ่งใหม่เสมอ! ✨</span>
+                    </div>
+
+                    <!-- Quick Info Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-semibold">
+                        <div class="p-2.5 rounded-xl bg-white border-2 border-anime-dark flex items-center gap-2">
+                            <i data-lucide="cake" class="w-4 h-4 text-pink-500"></i>
+                            <span>19 ก.พ. 2551</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white border-2 border-anime-dark flex items-center gap-2">
+                            <i data-lucide="droplet" class="w-4 h-4 text-red-500"></i>
+                            <span>กรุ๊ปเลือด A</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white border-2 border-anime-dark flex items-center gap-2 col-span-2 sm:col-span-1">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-purple-500"></i>
+                            <span>มหาสารคาม</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 space-y-10">
+
+        <section id="education" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- GPA Card -->
+            <div class="anime-card rounded-3xl p-6 bg-gradient-to-br from-emerald-100 to-teal-50 md:col-span-1 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-anime-teal rounded-2xl border-2 border-anime-dark flex items-center justify-center mb-4 shadow">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">ผลการเรียนมัธยม</h3>
+                    <p class="text-xs text-gray-600 mb-4">GPAX สะสม 4 ภาคเรียน</p>
+                </div>
+                <div class="text-center py-4 bg-white/90 rounded-2xl border-2 border-anime-dark shadow-sm">
+                    <span class="text-5xl font-black font-fredoka text-anime-teal">3.33</span>
+                    <p class="text-xs font-bold text-emerald-800 mt-1">สายวิทย์ - คณิต 🧪</p>
+                </div>
+            </div>
+
+            <!-- Detailed Academic Background -->
+            <div class="anime-card rounded-3xl p-6 bg-white md:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-anime-mint rounded-xl border-2 border-anime-dark flex items-center justify-center">
+                        <i data-lucide="stethoscope" class="w-5 h-5 text-emerald-900"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">การศึกษา & ข้อมูลส่วนตัว</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-gray-700">
+                    <li class="flex items-start gap-2.5 bg-emerald-50/70 p-3 rounded-xl border border-emerald-200">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                        <span><strong>ปัจจุบัน:</strong> นักศึกษาชั้นปีที่ 1 สาขาวิชาสาธารณสุขชุมชน วิทยาลัยสาธารณสุขศาสตร์</span>
+                    </li>
+                    <li class="flex items-start gap-2.5 bg-emerald-50/70 p-3 rounded-xl border border-emerald-200">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                        <span><strong>มัธยมปลาย:</strong> แผนการเรียนวิทยาศาสตร์ - คณิตศาสตร์ (Sci-Math)</span>
+                    </li>
+                    <li class="flex items-start gap-2.5 bg-emerald-50/70 p-3 rounded-xl border border-emerald-200">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                        <span><strong>ที่อยู่ปัจจุบัน:</strong> บ้านหนองเลา เลขที่ 50 หมู่ 9 ต.หนองเม็ก อ.นาเชือก จ.มหาสารคาม</span>
+                    </li>
+                    <li class="flex items-start gap-2.5 bg-emerald-50/70 p-3 rounded-xl border border-emerald-200">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                        <span><strong>สัญชาติ / เชื้อชาติ / ศาสนา:</strong> ไทย / ไทย / พุทธ</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Special Skills -->
+            <div class="anime-card rounded-3xl p-6 bg-gradient-to-br from-pink-50 to-rose-50">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-anime-pink rounded-xl border-2 border-anime-dark flex items-center justify-center">
+                        <i data-lucide="star" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">ความสามารถพิเศษ</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-2xl border-2 border-anime-dark flex items-center gap-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-anime-pink shrink-0">
+                            <i data-lucide="languages" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base">การสื่อสารภาษาอังกฤษ</h4>
+                            <p class="text-xs text-gray-500">ฟัง พูด และการสื่อสารทำความเข้าใจ</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl border-2 border-anime-dark flex items-center gap-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 shrink-0">
+                            <i data-lucide="music" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base">การขับร้องเพลง สรภัญญะ</h4>
+                            <p class="text-xs text-gray-500">ทักษะทางด้านดนตรี น้ำเสียง และจังหวะ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobbies -->
+            <div class="anime-card rounded-3xl p-6 bg-gradient-to-br from-amber-50 to-yellow-50">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-anime-yellow rounded-xl border-2 border-anime-dark flex items-center justify-center">
+                        <i data-lucide="smile" class="w-5 h-5 text-amber-900"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">งานอดิเรก</h3>
+                </div>
+                <div class="grid grid-cols-1 gap-3">
+                    <div class="bg-white p-3.5 rounded-2xl border-2 border-anime-dark flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-yellow-100 text-yellow-700 flex items-center justify-center font-bold text-lg">🎨</span>
+                        <div>
+                            <span class="font-bold text-sm block">วาดรูป (Drawing & Art)</span>
+                            <span class="text-xs text-gray-500">สร้างสรรค์งานศิลปะเพื่อผ่อนคลาย</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-2xl border-2 border-anime-dark flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center font-bold text-lg">📸</span>
+                        <div>
+                            <span class="font-bold text-sm block">ถ่ายรูป (Photography)</span>
+                            <span class="text-xs text-gray-500">เก็บภาพบรรยากาศและความทรงจำ</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3.5 rounded-2xl border-2 border-anime-dark flex items-center gap-3">
+                        <span class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">🏡</span>
+                        <div>
+                            <span class="font-bold text-sm block">ช่วยครอบครัวทำงานบ้าน</span>
+                            <span class="text-xs text-gray-500">ฝึกความรับผิดชอบและความเป็นระเบียบ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="anime-card rounded-3xl p-6 sm:p-8 bg-white">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 bg-sky-200 rounded-xl border-2 border-anime-dark flex items-center justify-center">
+                    <i data-lucide="users" class="w-5 h-5 text-sky-900"></i>
+                </div>
+                <h3 class="font-bold text-xl">ประวัติครอบครัว</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Father -->
+                <div class="p-4 rounded-2xl border-2 border-anime-dark bg-sky-50/60">
+                    <div class="flex items-center gap-2 font-bold text-sky-900 mb-2">
+                        <i data-lucide="user-check" class="w-4 h-4"></i>
+                        <span>บิดา: นายศักดิ์ณรงค์ อารีเอื้อ</span>
+                    </div>
+                    <p class="text-xs text-gray-600 mb-1"><strong>อาชีพ:</strong> พนักงานบริษัท</p>
+                    <p class="text-xs text-gray-600 flex items-center gap-1">
+                        <i data-lucide="phone-call" class="w-3.5 h-3.5 text-sky-600"></i>
+                        <span>099-458-2311</span>
+                    </p>
+                </div>
+                <!-- Mother -->
+                <div class="p-4 rounded-2xl border-2 border-anime-dark bg-pink-50/60">
+                    <div class="flex items-center gap-2 font-bold text-pink-900 mb-2">
+                        <i data-lucide="user-check" class="w-4 h-4"></i>
+                        <span>มารดา: นางสาวสุจิตตรา ปะติเก</span>
+                    </div>
+                    <p class="text-xs text-gray-600 mb-1"><strong>อาชีพ:</strong> พนักงานจ้างตามภารกิจ</p>
+                    <p class="text-xs text-gray-600 flex items-center gap-1">
+                        <i data-lucide="phone-call" class="w-3.5 h-3.5 text-pink-600"></i>
+                        <span>083-680-9078</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="anime-card rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-teal-50 via-pink-50 to-emerald-50 text-center">
+            <h3 class="text-2xl font-bold font-fredoka mb-1">ช่องทางการติดต่อ (Contact)</h3>
+            <p class="text-xs text-gray-500 mb-8">ยินดีที่ได้รู้จักค่ะ ติดต่อและติดตามผลงานได้ที่ช่องทางด้านล่างนี้ได้เลยค่ะ ✨</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="anime-btn bg-white p-4 rounded-2xl flex flex-col items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xs text-gray-500 font-semibold">Facebook</span>
+                    <span class="font-bold text-sm text-blue-600 group-hover:underline">Nam fon</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="anime-btn bg-white p-4 rounded-2xl flex flex-col items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xs text-gray-500 font-semibold">Instagram</span>
+                    <span class="font-bold text-sm text-pink-600 group-hover:underline">Nam.fxn_</span>
+                </a>
+
+                <!-- Phone -->
+                <a href="tel:0930249539" class="anime-btn bg-white p-4 rounded-2xl flex flex-col items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xs text-gray-500 font-semibold">เบอร์โทรศัพท์</span>
+                    <span class="font-bold text-sm text-emerald-600 group-hover:underline">093-024-9539</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:phonnaphaareea@gmail.com" class="anime-btn bg-white p-4 rounded-2xl flex flex-col items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-full bg-rose-500 text-white flex items-center justify-center">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xs text-gray-500 font-semibold">อีเมล</span>
+                    <span class="font-bold text-xs text-rose-600 group-hover:underline truncate w-full px-1">phonnaphaareea@gmail.com</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-16 text-center text-xs text-gray-500">
+        <p>© 2026 Phonnapha Aree-uea. Public Health Community Portfolio ✨</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
